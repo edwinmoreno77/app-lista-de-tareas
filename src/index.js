@@ -13,7 +13,6 @@ todoList.todos.forEach(todo => crearTodoHtml(todo));
 // const tarea = new Todo('Aprender JavaScript');
 // todoList.nuevoTodo(tarea);
 
-// console.log(todoList);
 // crearTodoHtml(tarea);
 
 // localStorage.setItem('mi-key', 'abc123');

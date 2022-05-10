@@ -1,4 +1,4 @@
-
+import { Todo } from '../classes/todo.class'
 
 export class TodoList {
 
@@ -48,9 +48,11 @@ export class TodoList {
 
     cargarLocalStorage() {
 
-        this.todos = localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : this.todos = [];
-        console.log(this.todos);
+        this.todos = localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')) : [];
 
+        this.todos = this.todos.map(obj => Todo.fromJson(obj));// el metodo map me permite barrer cada uno de los elementos que estan dentro de un arreglo y retornar uno nuevo con cada uno de sus objetos mutados, Todo se pone con T mayuscula porque estamos haciendo referencia a una propiedad estatica
+
+        // console.log(this.todos);
         // if (localStorage.getItem('todo')) {
         //     this.todos = JSON.parse(localStorage.getItem('todo'));
         //     console.log(this.todos);
